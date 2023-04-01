@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oxygen:wght@300;400;700&display=swap');
+
+:root {
+    --black: #000;
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --linear-gradient: linear-gradient( hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    /* --linear-gradient: linear-gradient(red, black); */
+    --red-input-error: hsl(0, 100%, 66%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-weight: 500;
+    /* max-width: 100%; */
+    margin-left: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.container {
+    width: 100vw;
+}
+
+.card {
+    position: relative;
+    top: 0;
+    /* bottom: 70%; */
+    height: 25rem;
+    /* width: 100%; */
+}
+
+.card-form {
+    height: 100%;
+    margin-top: 3rem;
+}
+
+#bg-image {
+    width: 45rem;
+    height: 20rem;
+}
+
+.card .card-back {
+    position: absolute;
+    top: 2rem;
+    right: -7rem;
+    height: 15rem;
+    /* right: 4rem; */
+}
+
+.card #cvc-on-card {
+    position: absolute;
+    top: 9rem;
+    right: -3.5rem;
+    color: var(--white);
+}
+
+.card .card-front {
+    z-index: 999;
+    position: absolute;
+    top: 11rem;
+    left: 2rem;
+    height: 15rem;
+} 
+
+.card .card-details {
+    position: absolute;
+    top: 11rem;
+    left: 2rem;
+    z-index: 999;
+}
+
+.card .card-details #card-logo {
+    margin-top:  2rem;
+    margin-left: 3rem;
+    height: 2.5rem;
+}
+
+.card .card-details #number-on-card {
+    margin-top: 4rem;
+    margin-left: 10rem;
+    color: var(--white);
+    -webkit-transform: scale(2.5,2.5);
+}
+
+.card .front .card-details .name-date {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-left: 3rem;
+    color: var(--white);
+}
+
+.card .front .card-details #date-on-card {
+    margin-right: -6rem;
+}
+
+.form-fill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    width: 90%;
+    margin-left: 10%;
+    /* padding: 2rem; */
+}
+
+input {
+    height: 4.5rem;
+    margin: 1rem 0 2rem;
+    padding: 1.2rem 1.5rem;
+    width: 100%;
+    border-radius: 0.7rem;
+    outline: none;
+    border: 1px solid var(--dark-grayish-violet);
+    color: var(--black);
+}
+
+input:active, input:focus {
+    border-image: var(--linear-gradient) 1;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+    border-radius: 0.3rem;
+}
+
+::placeholder{
+    font-size: 1.8rem;
+    color: var(--dark-grayish-violet);
+}
+
+.date-cvc {
+    display: inline-flex;
+}
+
+.form-fill .date {
+    width: 50%;
+}
+
+.form-fill .date #exp-date {
+    width: 40%;
+}
+
+.cvc {
+    width: 50%;
+}
+
+.cvc > input {
+    width: 100%;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+button {
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    outline: none;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+}
+
+.error-msg {
+    margin-bottom: 1.5rem;
+    margin-top: -1.5rem;
+    color: var(--red-input-error);
+    font-size: 1.6rem;
+}
+
+.complete-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    margin-top: -7rem;
+    margin-left: 60%;
+    transform: translateX(-50%);
+    /* display: none; */
+}
+
+.complete-container img {
+    display: flex;
+    margin-left: 30%;
+    margin-top: 4rem;
+    width: 40%;
+    margin-bottom: 2rem;
+}
+
+.complete-container #thanks {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    text-align: center;
+}
+
+.complete-container #added {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--dark-grayish-violet);
+    text-align: center;
+}
+
+.complete-container button {
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        overflow-y: hidden;
+    }
+
+    .card {
+        width: 35%;
+        height: 100vh;
+    }
+
+    #bg-image {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .card .card-front {
+        position: absolute;
+        top: 14rem;
+        left: 16rem;
+        height: 25rem;
+    } 
+
+    .card .card-details {
+        position: absolute;
+        top: 14rem;
+        left: 16rem;
+    }
+
+    .card .card-details #card-logo {
+        margin-top:  2.5rem;
+        margin-left: 3rem;
+        height: 5rem;
+    }
+
+    .card .card-details #number-on-card {
+        margin-top: 7rem;
+        font-size: 1.5rem;
+        margin-left: 16rem;
+        -webkit-transform: scale(3,3);
+    }
+
+    .card .front .card-details .name-date {
+        margin-top: 4rem;
+        margin-left: 3rem;
+        font-size: 2rem;
+    }
+
+    .card .front .card-details #date-on-card {
+        margin-right: -12rem;
+    }
+
+    .card .card-back {
+        position: absolute;
+        top: 42rem;
+        left: 25rem;
+        height: 25rem;
+    }
+
+    .card #cvc-on-card {
+        position: absolute;
+        top: 53.5rem;
+        right: -15rem;
+        color: var(--white);
+        font-size: 1.6rem;
+    }
+
+    .card-form {
+        width: 100%;
+    }
+
+    .form-fill {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 30%;
+        /* justify-content: center;
+        align-items: center; */
+        height: 100vh;
+        transform: translateY(-50%);
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+    }
+
+    .complete-container {
+        position: absolute;
+        top: 8%;
+        left: 15%;
+    }
+
+    .complete {
+        padding: 2rem;
+        width: 60%;
+    }
+
+    .complete-container img {
+        margin-left: 35%;
+        width: 30%;
+        margin-bottom: 4rem;
+    }
+
+    .complete-container #thanks {
+        margin: 1.5rem 0;
+        font-size: 4rem;
+    }
+
+    .complete-container #added {
+        margin-bottom: 4rem;
+        font-size: 2.6rem;
+    }
+
+    .complete-container button {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+}

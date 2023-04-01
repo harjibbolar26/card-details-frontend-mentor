@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card details</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="test.css" />
+</head>
+
+<body>
+    <div class="container">
+        <section class="card">
+            <img src="images/bg-main-desktop.png" alt="" id="bg-image" />
+            <div class="front">
+                <img src="images/bg-card-front.png" alt="" class="card-front" id="card-front" />
+
+                <div class="card-details">
+                    <img src="images/card-logo.svg" alt="" id="card-logo" />
+                    <p id="number-on-card" class="number-on-card">9591 6489 6389 1011</p>
+                    <div class="name-date">
+                        <p id="name-on-card" class="name-on-card">jane appleseed</p>
+                        <p id="date-on-card" class="date-on-card">00/00</p>
+                    </div>
+                </div>
+                <img src="images/bg-card-back.png" alt="" id="card-back" class="card-back" />
+                <p id="cvc-on-card">000</p>
+        </section>
+
+
+        <section class="card-form">
+            <form class="form-fill" method="post" id="my-form" action="/success.html">
+                <div class="form-group col-lg-6">
+                    <label for="holder-name">CARDHOLDER NAME</label> <br>
+                    <input type="text" id="holder-name" class="form-control" placeholder="e.g Jane Appleseed" />
+                    <p class="error-msg"></p>
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="card-number">CARD NUMBER</label> <br>
+                    <input type="text" id="card-number" class="form-control" placeholder="e.g 1234 5678 9123 0000" />
+                    <p class="error-msg"></p>
+                </div>
+                <div class="date-cvc">
+                    <div class="form-group col-lg-3 date">
+                        <label for="exp-date">EXP. DATE (MM/YY)</label> <br>
+                        <div style="display: flex;">
+                            <input type="number" id="exp-date-mm" class="form-control" placeholder="MM" style="margin-right: 1rem;"/>
+                            <input type="number" id="exp-date-yy" class="form-control" placeholder="YY"
+                                style="margin-right: 1rem;" />
+                        </div>
+                        <p class="error-msg"></p>
+
+                    </div>
+                    <div class="form-group col-lg-6 cvc">
+                        <label for="card-cvc">CVC</label> <br>
+                        <input type="password" id="card-cvc" class="form-control" placeholder="e.g 123" />
+                        <p class="error-msg" id="err-msg"></p>
+                    </div>
+
+                </div>
+                <button type="submit" id="btn btn-success">Confirm</button>
+            </form>
+
+            <!-- <div class="complete-container">
+                <div class="complete">
+                    <img src="images/icon-complete.svg" alt="">
+                    <p id="thanks">Thank you!</p>
+                    <p id="added">We've added your card details</p>
+                    <button id="continue">Continue</button>
+                </div>
+
+            </div> -->
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
